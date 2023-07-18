@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Online Ticket Generator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="container">
+      <h1>Generate Ticket</h1>
+      <div class="form" id="fillInfo">
+         <div class="getDestination">
+            <div class="fromLoc">
+               <label for="from">From:</label>
+               <select id="fromForm">
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai" selected>Mumbai</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Surat">Surat</option>
+               </select>
+            </div>
+            <div class="toLoc">
+               <label for="toForm">To:</label>
+               <select id="toForm">
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Bangalore" selected>Bangalore</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Surat">Surat</option>
+               </select>
+            </div>
+         </div>
+         <label for="dateLoc">Date</label>
+         <input type="date" name="dateLoc" id="date">
+         <label for="fullName">Name : </label>
+         <input type="text" name="fullName" id="fullName">
+         <label for="age">Age : </label>
+         <input type="number" name="age" id="age">
+         <label for="number">Phone Number : </label>
+         <input type="number" name="number" id="number">
+         <label for="email">Email : </label>
+         <input type="email" name="email" id="email">
+         <label for="address">Address : </label>
+         <input type="text" name="address" id="address">
+
+         <button id="getTicket" class="btn" type="submit">Ticket Please</button>
+      </div>
+   </div>
+
+   <!-- choose ticket  -->
+   <div id="ticket" class="choose-ticket">
+   </div>
+
+
+   <!-- pdf of ticket -->
+   <div id="pdfTkt">
+      <div id="mn">
+         <canvas class="right" id="qrCode"></canvas>
+      </div>
+      <button onclick=dwn()>Download</button>
+   </div>
+   <!-- </div> -->
+   
+   
+   <!-- /* Load the library */ -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+   <script src="./js/script.js"></script>
+   <script src="./js/ticket.js"></script>
+   <script src="./js/pdftck.js"></script>
+   <script src="./js/download.js"></script>
+   <!-- //script for resume download as pdf -->
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+
+</html>
