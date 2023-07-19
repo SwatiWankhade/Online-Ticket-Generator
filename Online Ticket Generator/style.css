@@ -1,31 +1,54 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu&family=Varela+Round&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Varela Round', sans-serif; */
 }
 body{
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
     justify-content: center;
     align-items: center;
+    background-image: url(./bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.container{
-    display: flex;
-    background-color: rgb(76, 76, 255);
-    /* width: 50%; */
-    flex-direction: column;
-  padding: 20px;
+#main{
+    margin-top: 20px;
+    /* color: blue; */
+    font-weight: bold;
+    border-bottom: 4px solid blue;
+    color: white;
+    z-index: 20;
 }
+
 .form{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
-}
+    background-color: rgb(76, 76, 255);    
+    padding: 20px;
+    margin-top: 25px;
+    text-align:start;
+    /* align-items: center; */
+    z-index: 10;
 
+}
+#fromForm , #toForm{
+padding: 6px 4px;
+text-align: center;
+font-size: .9rem;
+font-weight: 550;
+}
 .form .getDestination{
     display: flex;
+    margin-bottom: 8px;
 }
 .form .getDestination .fromLoc{
     margin-right:10px ;
@@ -35,78 +58,125 @@ body{
 }
 .form .getDestination label{
     color: white;
-    font-size: 1.3rem;
-    
+    font-size: 1.3rem;    
 }
-.getDestination .fromLoc option{
+.fromStyle{
+    /* font-size: .8rem; */
     padding: 10px;
-    font-size: 10px;
+    color: rgb(76, 76, 255); 
+}
+
+.form label{
+    color: white;
 }
 .form input{
     width: 15rem;
     padding: 5px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(243, 246, 248);
+    background-color: rgb(207, 209, 211);
+    margin-bottom: 8px;
 }
-.form button{
+#getTicket{
+    width: 45%;
+    padding: 8px;
+    margin: 5% 0 0 20%;
+    color: rgb(76, 76, 255);
+    cursor: pointer;
+    font-size: 1rem;
+ }
+ #getTicket:hover{
+    filter: brightness(150%);
+    font-weight: 600;
+    font-size: 1.2rem;
+ }
+
+/* Ticket  */
+.selectTicket{
+    background-color: rgb(136, 150, 170);
+    padding: 23px;
+    margin:10px
+}
+.selectTicket:hover{
+    filter: brightness(120%);
+   
+}
+.tktBtn{
+    background-color: rgb(187, 8, 8);
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
     width: 50%;
     margin: 20px 50px 10px 5px;
    padding:8px;
    cursor:pointer;
-   align-items: center;
-
+    /* float:right; */
 }
+.tktBtn:hover{
+    background-color: white;
+    border: 2px solid red;
+    color:rgb(100, 156, 242) ;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+ 
 
 
 #ticket{
     display: none;    
 }
-/* .choose-ticket{
-    display: grid;
-    grid-template-columns: repeat(1fr,1fr);
-} */
+.ticketTitle{
+    text-align: center;
+    /* font-size: 1.5rem; */
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+.companyName{
+    font-size: 1rem;
+     font-family: 'Varela Round', sans-serif;
+     padding: 3px;
+}
+.ticketDate{
+    margin: 8px 0 8px 0;
+}
+.dvLoc{
+    display: flex;
+    margin-bottom:8px ;
+}
+.tktFrom{
+    /* margin-right: 4px; */
+    padding: 0 53px 0 0 ;
+}
+.tktTo{
+    padding: 0 0 0 10px;
+}
+.Ticketdist{
+    margin-bottom: 8px;
+}
+.dvTime{
+    display: flex;
+    margin-bottom: 8px;
+}
+.tktReport{
+    padding: 0 43px 0 0 ;
+}
+.tktPrice{
+    margin-bottom: 8px;
+    color: rgb(52, 50, 50);
+}
 
-.info{
-    margin-top: 50px;
-    background-color: rgb(137, 135, 135);
-    display:flex;
-    flex-direction:column;
-    /* width:40%; */
-    align-items:center;
-    padding:30px;
-    margin-top: 10px;
-    /* display:none; */
-}
-.info .ticket-title{
-    padding-bottom: 10px;
-    color:white;
-}
-.loc-info{
-    display:flex;
-
-}
-.from-loc, .to-loc{
-    padding:10px;
-}
-
-.time-ticket{
-    display:flex;
-    padding-bottom:10px;
-}
-#ticket button{
-    width: 50%;
-    margin: 20px 50px 10px 5px;
-   padding:8px;
-   cursor:pointer;
-   align-items: center;
-}
 
 
 /* to get ticket */
 #pdfTkt{
     display: none;
-    margin: 20px;
+    /* margin: 20px; */
+    margin-top: 8%;
+    background-color: rgb(155, 155, 159);
+    padding: 5%;
 }
 
 #left{
@@ -114,8 +184,31 @@ body{
    margin-right : 10px;
 }
 .right{
+    /* width: 30%; */
     float: right;
-    margin-left: 5px;
+    margin-left: 10px;
+}
+#download{
+    float: right;
+margin-top: 27%;
+padding: 10px;
+font-size: 1rem;
+font-weight: 600;
+border: 2px solid white;
+border-radius: 17px;
+background: #0eb10e;
+cursor: pointer;
+color: white;
+}
+#download:hover{
+    filter: brightness(170%);
+    /* font-size: 1.4rem; */
+    font-weight: 600;
+}
+.seat{
+    color: rgb(1, 9, 42);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
 }
 
 

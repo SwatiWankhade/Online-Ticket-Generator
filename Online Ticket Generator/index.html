@@ -9,45 +9,45 @@
 </head>
 
 <body>
+   <h1 id="main">Generate Ticket</h1>
    <div class="container">
-      <h1>Generate Ticket</h1>
       <div class="form" id="fillInfo">
          <div class="getDestination">
             <div class="fromLoc">
                <label for="from">From:</label>
                <select id="fromForm">
-                  <option value="Delhi">Delhi</option>
-                  <option value="Mumbai" selected>Mumbai</option>
-                  <option value="Bangalore">Bangalore</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Chennai">Chennai</option>
-                  <option value="Kolkata">Kolkata</option>
-                  <option value="Jaipur">Jaipur</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Surat">Surat</option>
+                  <option value="Delhi" class="fromStyle">Delhi</option>
+                  <option value="Mumbai" selected class="fromStyle">Mumbai</option>
+                  <option value="Bangalore" class="fromStyle">Bangalore</option>
+                  <option value="Hyderabad" class="fromStyle">Hyderabad</option>
+                  <option value="Chennai" class="fromStyle">Chennai</option>
+                  <option value="Kolkata" class="fromStyle">Kolkata</option>
+                  <option value="Jaipur" class="fromStyle">Jaipur</option>
+                  <option value="Pune" class="fromStyle">Pune</option>
+                  <option value="Ahmedabad" class="fromStyle">Ahmedabad</option>
+                  <option value="Surat" class="fromStyle">Surat</option>
                </select>
             </div>
             <div class="toLoc">
                <label for="toForm">To:</label>
                <select id="toForm">
-                  <option value="Delhi">Delhi</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Bangalore" selected>Bangalore</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Chennai">Chennai</option>
-                  <option value="Kolkata">Kolkata</option>
-                  <option value="Jaipur">Jaipur</option>
-                  <option value="Pune">Pune</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Surat">Surat</option>
+                  <option value="Delhi" class="fromStyle">Delhi</option>
+                  <option value="Mumbai" selected class="fromStyle">Mumbai</option>
+                  <option value="Bangalore" class="fromStyle">Bangalore</option>
+                  <option value="Hyderabad" class="fromStyle">Hyderabad</option>
+                  <option value="Chennai" class="fromStyle">Chennai</option>
+                  <option value="Kolkata" class="fromStyle">Kolkata</option>
+                  <option value="Jaipur" class="fromStyle">Jaipur</option>
+                  <option value="Pune" class="fromStyle">Pune</option>
+                  <option value="Ahmedabad" class="fromStyle">Ahmedabad</option>
+                  <option value="Surat" class="fromStyle">Surat</option>
                </select>
             </div>
          </div>
          <label for="dateLoc">Date</label>
-         <input type="date" name="dateLoc" id="date">
+         <input type="date" name="dateLoc" id="date" >
          <label for="fullName">Name : </label>
-         <input type="text" name="fullName" id="fullName">
+         <input type="text" name="fullName" id="fullName" >
          <label for="age">Age : </label>
          <input type="number" name="age" id="age">
          <label for="number">Phone Number : </label>
@@ -71,7 +71,7 @@
       <div id="mn">
          <canvas class="right" id="qrCode"></canvas>
       </div>
-      <button onclick=dwn()>Download</button>
+      <button id="download" onclick=dwn()>Download</button>
    </div>
    <!-- </div> -->
    

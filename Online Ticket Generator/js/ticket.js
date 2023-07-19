@@ -59,15 +59,61 @@ for (let i = 1; i <= 4; i++) {
        distance = 1416;
     } else if (from === "Hyderabad" && to === "Bangalore" || from === "Bangalore" && to === "Hyderabad") {
              distance = 3000;
-    } else if (from === "Pune" && to === "Hyderabad" || from === "Hyderabad" && to === "Pune") {
-        distance = 1400;
-    }else if (from === "Kolkata" && to === "Chennai" || from === "Chennai" && to === "Kolkata") {
+    } if (from === "Kolkata" && to === "Chennai" || from === "Chennai" && to === "Kolkata") {
         distance = 1006;
-    }else if (from === "Jaipur" && to === "Mumbai" || from === "Mumbai" && to === "Jaipur") {
-        distance = 1000;
     }else if (from === "Ahmedabad" && to === "Surat" || from === "Surat" && to === "Ahmedabad") {
         distance = 1200;
-    }
+    }else if (from === "Delhi" && to === "Bangalore" || from === "Bangalore" && to === "Delhi") {
+        distance = 1416;
+     } 
+     else if (from === "Delhi" && to === "Hyderabad" || from === "Hyderabad" && to === "Delhi") {
+        distance = 3333;
+     } else if (from === "Delhi" && to === "Kolkata" || from === "Kolkata" && to === "Delhi") {
+        distance = 2222;
+     } else if (from === "Delhi" && to === "Surat" || from === "Surat" && to === "Delhi") {
+        distance = 1211;
+     } else if (from === "Delhi" && to === "Ahmedabad" || from === "Ahmedabad" && to === "Delhi") {
+        distance = 6758;
+     } else if (from === "Delhi" && to === "Chennai" || from === "Chennai" && to === "Delhi") {
+        distance = 4322;
+     } else if (from === "Mumbai" && to === "Bangalore" || from === "Bangalore" && to === "Mumbai") {
+        distance = 7890;
+     } else if (from === "Mumbai" && to === "Hyderabad" || from === "Hyderabad" && to === "Mumbai") {
+        distance = 5678;
+     } else if (from === "Mumbai" && to === "Kolkata" || from === "Kolkata" && to === "Mumbai") {
+        distance = 3214;
+     } else if (from === "Mumbai" && to === "Surat" || from === "Surat" && to === "Mumbai") {
+        distance = 3214;
+     } else if (from === "Mumbai" && to === "Chennai" || from === "Chennai" && to === "Mumbai") {
+        distance = 2134;
+     } else if (from === "Mumbai" && to === "Ahmedabad" || from === "Ahmedabad" && to === "Mumbai") {
+        distance = 1000;
+     } else if (from === "Hyderabad" && to === "Ahmedabad" || from === "Ahmedabad" && to === "Hyderabad") {
+        distance = 6565;
+     } else if (from === "Hyderabad" && to === "Chennai" || from === "Chennai" && to === "Hyderabad") {
+        distance = 3462;
+     } else if (from === "Hyderabad" && to === "Surat" || from === "Surat" && to === "Hyderabad") {
+        distance = 8769;
+     } else if (from === "Hyderabad" && to === "Kolkata" || from === "Kolkata" && to === "Hyderabad") {
+        distance = 7654;
+     } else if (from === "Bangalore" && to === "Kolkata" || from === "Kolkata" && to === "Bangalore") {
+        distance = 8921;
+     } else if (from === "Bangalore" && to === "Surat" || from === "Surat" && to === "Bangalore") {
+        distance = 1290;
+     } else if (from === "Bangalore" && to === "Chennai" || from === "Chennai" && to === "Bangalore") {
+        distance = 4563;
+     } else if (from === "Bangalore" && to === "Ahmedabad" || from === "Ahmedabad" && to === "Bangalore") {
+        distance = 8976;
+     } else if (from === "Kolkata" && to === "Ahmedabad" || from === "Ahmedabad" && to === "Kolkata") {
+        distance = 4567;
+     } else if (from === "Kolkata" && to === "Chennai" || from === "Chennai" && to === "Kolkata") {
+        distance = 4321;
+     } else if (from === "Kolkata" && to === "Surat" || from === "Surat" && to === "Kolkata") {
+        distance = 1234;
+     } else if (from === "Chennai" && to === "Surat" || from === "Surat" && to === "Chennai") {
+        distance = 2000;
+     } 
+
     Ticketdist.innerText =  `Distance : ${distance} km`;
     document.getElementById(i).appendChild(Ticketdist);
 
@@ -76,15 +122,25 @@ for (let i = 1; i <= 4; i++) {
     dvTime.setAttribute("class", "dvTime");
     document.getElementById(i).appendChild(dvTime);
 
+     function randomTime() {
+        var hours = Math.floor(Math.random() * 12) + 1;
+        var minutes = Math.floor(Math.random() * 60);
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        return hours + ':' + minutes + ' ' + ampm;
+      }
+      let repTime =randomTime();
+      
+
     var ticketReport = document.createElement("p");
     ticketReport.setAttribute("class", "tktReport");
-    ticketReport.innerText = "Reporting Time : 10:00 AM";
+    console.log(repTime);
+    ticketReport.innerText = `Reporting Time : ${repTime}`;
     dvTime.appendChild(ticketReport);
 
-    var ticketArrival = document.createElement("p");
-    ticketArrival.setAttribute("class", "tktArrival");
-    ticketArrival.innerText = "Arrival Time : ";
-    dvTime.appendChild(ticketArrival);
+    // var ticketArrival = document.createElement("p");
+    // ticketArrival.setAttribute("class", "tktArrival");
+    // ticketArrival.innerText = `Arrival Time : ${1+repTime}`;
+    // dvTime.appendChild(ticketArrival);
 
     var setPrice = Math.round(distance*(i+1));
 
